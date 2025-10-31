@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Button } from "../ui/button"
-import { ArrowRight } from "lucide-react"
-import { useState } from "react"
-import { WelcomeModal } from "./welcome-modal"
+import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { WelcomeModal } from "./welcome-modal";
 
 export function Hero() {
-  const [showWelcomeModal, setShowWelcomeModal] = useState(false)
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
 
   return (
     <>
@@ -20,15 +20,16 @@ export function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Invest in Lagos, Abuja, Enugu and Anambra Properties with as little as{" "}
-              <span className="font-semibold text-gray-900">50 STRK</span>, tokenize, trade, and earn yield all on
-              blockchain
+              Invest in Lagos, Abuja, Enugu and Anambra Properties with as
+              little as{" "}
+              <span className="font-semibold text-gray-900">50 STRK</span>,
+              tokenize, trade, and earn yield all on blockchain
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
                 size="lg"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold"
+                className="bg-emerald-600 hover:bg-emerald-700 cursor-pointer text-white font-semibold"
                 onClick={() => setShowWelcomeModal(true)}
               >
                 Get Started
@@ -46,15 +47,21 @@ export function Hero() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
               <div>
-                <p className="text-3xl sm:text-4xl font-bold text-emerald-600">2.5M+</p>
+                <p className="text-3xl sm:text-4xl font-bold text-emerald-600">
+                  2.5M+
+                </p>
                 <p className="text-sm text-gray-600 mt-2">Total STRK Locked</p>
               </div>
               <div>
-                <p className="text-3xl sm:text-4xl font-bold text-emerald-600">15,000+</p>
+                <p className="text-3xl sm:text-4xl font-bold text-emerald-600">
+                  15,000+
+                </p>
                 <p className="text-sm text-gray-600 mt-2">Active Investors</p>
               </div>
               <div>
-                <p className="text-3xl sm:text-4xl font-bold text-emerald-600">8.5%</p>
+                <p className="text-3xl sm:text-4xl font-bold text-emerald-600">
+                  8.5%
+                </p>
                 <p className="text-sm text-gray-600 mt-2">Average APY</p>
               </div>
             </div>
@@ -62,7 +69,10 @@ export function Hero() {
         </div>
       </section>
 
-      <WelcomeModal open={showWelcomeModal} onOpenChange={setShowWelcomeModal} />
+      <WelcomeModal
+        open={showWelcomeModal}
+        onOpenChange={setShowWelcomeModal}
+      />
     </>
-  )
+  );
 }
